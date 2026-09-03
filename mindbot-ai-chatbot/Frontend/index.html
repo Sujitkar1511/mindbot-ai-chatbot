@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindBot – AI Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Subtle center glow -->
+    <div class="center-glow"></div>
+
+    <div class="app">
+      <!-- Header / Mode Switcher -->
+      <header class="app-header">
+        <div class="mode-toggle" id="mode-toggle">
+          <div class="mode-slider" id="mode-slider"></div>
+          <button
+            class="mode-btn active"
+            data-mode="without-memory"
+            type="button"
+          >
+            Without Memory
+          </button>
+          <button
+            class="mode-btn"
+            data-mode="with-memory"
+            type="button"
+          >
+            <span class="mode-sparkle">✦</span> With Memory
+          </button>
+        </div>
+      </header>
+
+      <!-- Messages (hidden until chat starts) -->
+      <div class="messages" id="messages"></div>
+
+      <!-- Welcome screen (shown by default) -->
+      <div class="welcome" id="welcome">
+        <h1>Hi, I'm MindBot</h1>
+        <p class="welcome-sub">Ready when you are</p>
+      </div>
+
+      <!-- Input bar -->
+      <div class="input-area">
+        <div class="input-pill">
+          <textarea id="input" placeholder="Ask MindBot…" rows="1"></textarea>
+          <button id="send-btn" disabled>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
